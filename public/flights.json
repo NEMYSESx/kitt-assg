@@ -1,0 +1,92 @@
+[
+  {
+    "segments": [
+      {
+        "airline": {
+          "name": "Emirates",
+          "logo": "https://s3-alpha-sig.figma.com/img/7076/3924/882e9e02ae1c412e82b17d8766c73164?Expires=1728864000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=cs5yVweBBbvYS-QkoCSuspw~tVWqH-mcrRnTViHEVyYhP53LQgwQ4FrMMR-EIFcXMMM2j7i46yU6vCrOFrVyU2xI8GmWhl~38AEXARYKLkeMKehftiW2Hx24JBA6qz0zPmbORG4FSZLlCwlBcY7D4QZMyH63tXkQsZges4ZLxmOKne2RJRaR~CRGK5loNSgsb4Jv0h8jHVGwSqx~JkN1kmJzs~y6TqkSGwgzFyUCCoNFjM2pF5CSakwX4Ma2S21FSQPH6aPtixxMj6Xaq3tjB1Ur8vZhlMPoAg3kwA20B8wnUf-jpv9vEmj~X2GHkqkF5flZsPI9mpolyoQUjiio2w__"
+        },
+        "flightNumber": "AT 4334",
+        "departureTime": "9:45 AM",
+        "arrivalTime": "11:45 AM",
+        "route": "CDG - DXB",
+        "duration": "2h 10min",
+        "stops": "Non stop"
+      },
+      {
+        "airline": {
+          "name": "Lufthansa",
+          "logo": "https://s3-alpha-sig.figma.com/img/ea70/b280/dfe3360521722410b57f9f5917445a6f?Expires=1728864000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YBvBpL73nueTsgSvy1j8lsJ25CL30j49OWG92whTeQiDrpruiCkPicWbjYjGHlaxn5fhjaIeq3GlpCDtsgmBEm9iEPG8S4pJ~9DT~vfA5g8XWDUm2eKtqpZRMdO1iqyNU-1vZVl~KIuFc-bRUlhcrkOl3WCssCUPRS0riS0fYEISCO-mVJDsRM6vHYfXWRJhEWvBp2QB38WLXK3Z0FOw3B3BRnaSlN2gjsKsb3RH0kBODgmm-TOvXR6eBXbRySYX7Si4vLDQDL5hJ5m-o4s9dQbvhPyFOXDSYsNmFHw00eAOu1yM~y04zW1HmJET9MZj0PYt8O0UYLimH8z7hvv4-A__"
+        },
+        "flightNumber": "AT 5678",
+        "departureTime": "11:45 PM",
+        "arrivalTime": "6:45 AM",
+        "route": "DXB - CDG",
+        "duration": "4h 10min",
+        "stops": "2 stops",
+        "additionalInfo": "+1 day"
+      }
+    ],
+    "price": 2456.9
+  },
+  {
+    "segments": [
+      {
+        "airline": {
+          "name": "Qatar Airways",
+          "logo": "https://s3-alpha-sig.figma.com/img/7076/3924/882e9e02ae1c412e82b17d8766c73164?Expires=1728864000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=cs5yVweBBbvYS-QkoCSuspw~tVWqH-mcrRnTViHEVyYhP53LQgwQ4FrMMR-EIFcXMMM2j7i46yU6vCrOFrVyU2xI8GmWhl~38AEXARYKLkeMKehftiW2Hx24JBA6qz0zPmbORG4FSZLlCwlBcY7D4QZMyH63tXkQsZges4ZLxmOKne2RJRaR~CRGK5loNSgsb4Jv0h8jHVGwSqx~JkN1kmJzs~y6TqkSGwgzFyUCCoNFjM2pF5CSakwX4Ma2S21FSQPH6aPtixxMj6Xaq3tjB1Ur8vZhlMPoAg3kwA20B8wnUf-jpv9vEmj~X2GHkqkF5flZsPI9mpolyoQUjiio2w__"
+        },
+        "flightNumber": "QR 1234",
+        "departureTime": "3:00 AM",
+        "arrivalTime": "7:00 AM",
+        "route": "DOH - LAX",
+        "duration": "16h 00min",
+        "stops": "1 stop"
+      },
+      {
+        "airline": {
+          "name": "British Airways",
+          "logo": "https://s3-alpha-sig.figma.com/img/ea70/b280/dfe3360521722410b57f9f5917445a6f?Expires=1728864000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YBvBpL73nueTsgSvy1j8lsJ25CL30j49OWG92whTeQiDrpruiCkPicWbjYjGHlaxn5fhjaIeq3GlpCDtsgmBEm9iEPG8S4pJ~9DT~vfA5g8XWDUm2eKtqpZRMdO1iqyNU-1vZVl~KIuFc-bRUlhcrkOl3WCssCUPRS0riS0fYEISCO-mVJDsRM6vHYfXWRJhEWvBp2QB38WLXK3Z0FOw3B3BRnaSlN2gjsKsb3RH0kBODgmm-TOvXR6eBXbRySYX7Si4vLDQDL5hJ5m-o4s9dQbvhPyFOXDSYsNmFHw00eAOu1yM~y04zW1HmJET9MZj0PYt8O0UYLimH8z7hvv4-A__"
+        },
+        "flightNumber": "BA 5678",
+        "departureTime": "10:00 AM",
+        "arrivalTime": "2:00 PM",
+        "route": "LAX - DOH",
+        "duration": "15h 30min",
+        "stops": "2 stops",
+        "additionalInfo": "+1 day"
+      }
+    ],
+    "price": 3200.5
+  },
+  {
+    "segments": [
+      {
+        "airline": {
+          "name": "Turkish Airlines",
+          "logo": "https://s3-alpha-sig.figma.com/img/7076/3924/882e9e02ae1c412e82b17d8766c73164?Expires=1728864000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=cs5yVweBBbvYS-QkoCSuspw~tVWqH-mcrRnTViHEVyYhP53LQgwQ4FrMMR-EIFcXMMM2j7i46yU6vCrOFrVyU2xI8GmWhl~38AEXARYKLkeMKehftiW2Hx24JBA6qz0zPmbORG4FSZLlCwlBcY7D4QZMyH63tXkQsZges4ZLxmOKne2RJRaR~CRGK5loNSgsb4Jv0h8jHVGwSqx~JkN1kmJzs~y6TqkSGwgzFyUCCoNFjM2pF5CSakwX4Ma2S21FSQPH6aPtixxMj6Xaq3tjB1Ur8vZhlMPoAg3kwA20B8wnUf-jpv9vEmj~X2GHkqkF5flZsPI9mpolyoQUjiio2w__"
+        },
+        "flightNumber": "TK 9100",
+        "departureTime": "1:00 PM",
+        "arrivalTime": "5:00 PM",
+        "route": "IST - JFK",
+        "duration": "11h 00min",
+        "stops": "Non stop"
+      },
+      {
+        "airline": {
+          "name": "United Airlines",
+          "logo": "https://s3-alpha-sig.figma.com/img/ea70/b280/dfe3360521722410b57f9f5917445a6f?Expires=1728864000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YBvBpL73nueTsgSvy1j8lsJ25CL30j49OWG92whTeQiDrpruiCkPicWbjYjGHlaxn5fhjaIeq3GlpCDtsgmBEm9iEPG8S4pJ~9DT~vfA5g8XWDUm2eKtqpZRMdO1iqyNU-1vZVl~KIuFc-bRUlhcrkOl3WCssCUPRS0riS0fYEISCO-mVJDsRM6vHYfXWRJhEWvBp2QB38WLXK3Z0FOw3B3BRnaSlN2gjsKsb3RH0kBODgmm-TOvXR6eBXbRySYX7Si4vLDQDL5hJ5m-o4s9dQbvhPyFOXDSYsNmFHw00eAOu1yM~y04zW1HmJET9MZj0PYt8O0UYLimH8z7hvv4-A__"
+        },
+        "flightNumber": "UA 3456",
+        "departureTime": "6:00 PM",
+        "arrivalTime": "10:00 PM",
+        "route": "JFK - IST",
+        "duration": "13h 30min",
+        "stops": "2 stops",
+        "additionalInfo": "+1 day"
+      }
+    ],
+    "price": 1500.0
+  }
+]
