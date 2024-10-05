@@ -1,5 +1,8 @@
 /* eslint-disable @typescript-eslint/no-empty-object-type */
 /* @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-empty-interface */
+
 "use client";
 
 import * as React from "react";
