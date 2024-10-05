@@ -26,13 +26,6 @@ export const TopBar: React.FC<{ onClose: () => void }> = ({ onClose }) => {
 
   const router = useRouter();
 
-  const selectedFromAirport = airportsData.airports.find(
-    (airport) => airport.code === fromAirport
-  );
-  const selectedToAirport = airportsData.airports.find(
-    (airport) => airport.code === toAirport
-  );
-
   const handleSearch = () => {
     if (!fromAirport || !toAirport || !departureDate) {
       setWarningMessage("Please fill in all required fields.");
@@ -56,9 +49,9 @@ export const TopBar: React.FC<{ onClose: () => void }> = ({ onClose }) => {
           <div className="flex space-x-4 items-center">
             <DestinationSwitcher
               airports={airportsData.airports}
-              selectedAirport={selectedFromAirport || null}
+              selectedAirport={fromAirport} // Directly use the airport object
               onSelect={(airport) => {
-                setFromAirport(airport.code);
+                setFromAirport(airport); // Store the entire airport object
               }}
             />
 
@@ -68,9 +61,9 @@ export const TopBar: React.FC<{ onClose: () => void }> = ({ onClose }) => {
 
             <DestinationSwitcher
               airports={airportsData.airports}
-              selectedAirport={selectedToAirport || null}
+              selectedAirport={toAirport} // Directly use the airport object
               onSelect={(airport) => {
-                setToAirport(airport.code);
+                setToAirport(airport); // Store the entire airport object
               }}
             />
 

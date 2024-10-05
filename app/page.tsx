@@ -66,7 +66,7 @@ export default function Home() {
               selectedAirport={selectedToAirport}
               onSelect={(airport) => {
                 setSelectedToAirport(airport);
-                setToAirport(airport.code);
+                setToAirport(airport);
               }}
             />
             <div className="rounded-full bg-gray-200 p-3">
@@ -77,7 +77,7 @@ export default function Home() {
               selectedAirport={selectedFromAirport}
               onSelect={(airport) => {
                 setSelectedFromAirport(airport);
-                setFromAirport(airport.code);
+                setFromAirport(airport);
               }}
             />
             <div className="ml-4 flex space-x-4">
@@ -105,6 +105,14 @@ export default function Home() {
           </div>
         </CardContent>
       </Card>
+      <div className="absolute bottom-0 right-0">
+        <div className="text-4xl flex flex-col border w-96">
+          <span className="text-center">Note</span>
+          <span>
+            Choose JFK and IST in destination for the search results :p
+          </span>
+        </div>
+      </div>
     </div>
   );
 }

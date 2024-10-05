@@ -59,6 +59,12 @@
       "code": "HND",
       "city": "Tokyo",
       "country": "Japan"
+    },
+    {
+      "name": "Inter Airport",
+      "code": "IST",
+      "city": "bokaro",
+      "country": "india"
     }
   ]
 }

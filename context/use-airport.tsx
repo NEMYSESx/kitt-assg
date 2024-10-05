@@ -14,10 +14,10 @@ interface AirportContextType {
   setDepartureDate: React.Dispatch<React.SetStateAction<Date | undefined>>;
   returnDate: Date | undefined;
   setReturnDate: React.Dispatch<React.SetStateAction<Date | undefined>>;
-  fromAirport: string;
-  setFromAirport: React.Dispatch<React.SetStateAction<string>>;
-  toAirport: string;
-  setToAirport: React.Dispatch<React.SetStateAction<string>>;
+  fromAirport: Airport | null; // Change this to Airport object
+  setFromAirport: React.Dispatch<React.SetStateAction<Airport | null>>;
+  toAirport: Airport | null; // Change this to Airport object
+  setToAirport: React.Dispatch<React.SetStateAction<Airport | null>>;
   fromFilteredAirports: Airport[];
   setFromFilteredAirports: React.Dispatch<React.SetStateAction<Airport[]>>;
   toFilteredAirports: Airport[];
@@ -28,7 +28,6 @@ interface AirportContextType {
   setShowToDropdown: React.Dispatch<React.SetStateAction<boolean>>;
   warningMessage: string;
   setWarningMessage: React.Dispatch<React.SetStateAction<string>>;
-
   isSidebarOpen: boolean;
   toggleSidebar: () => void;
 }
@@ -42,8 +41,8 @@ export const AirportProvider: React.FC<{ children: React.ReactNode }> = ({
     undefined
   );
   const [returnDate, setReturnDate] = useState<Date | undefined>(undefined);
-  const [fromAirport, setFromAirport] = useState("");
-  const [toAirport, setToAirport] = useState("");
+  const [fromAirport, setFromAirport] = useState<Airport | null>(null);
+  const [toAirport, setToAirport] = useState<Airport | null>(null);
   const [fromFilteredAirports, setFromFilteredAirports] = useState(
     airportsData.airports
   );
@@ -53,16 +52,10 @@ export const AirportProvider: React.FC<{ children: React.ReactNode }> = ({
   const [showFromDropdown, setShowFromDropdown] = useState(false);
   const [showToDropdown, setShowToDropdown] = useState(false);
   const [warningMessage, setWarningMessage] = useState("");
-
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const toggleSidebar = () => {
-    setIsSidebarOpen((prev) => {
-      console.log("Previous state:", prev);
-      const newState = !prev;
-      console.log("New state:", newState);
-      return newState;
-    });
+    setIsSidebarOpen((prev) => !prev);
   };
 
   return (
@@ -86,7 +79,6 @@ export const AirportProvider: React.FC<{ children: React.ReactNode }> = ({
         setShowToDropdown,
         warningMessage,
         setWarningMessage,
-
         isSidebarOpen,
         toggleSidebar,
       }}
