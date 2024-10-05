@@ -2,39 +2,33 @@
 
 import React, { useState } from "react";
 import { SearchNav } from "@/components/search-nav";
-import { useAirportContext } from "@/context/use-airport"; // Use the context
-import { TopBar } from "@/components/topbar"; // Import TopBar
-import Sidebar from "@/components/sidebar"; // Import Sidebar
+import { useAirportContext } from "@/context/use-airport";
+import { TopBar } from "@/components/topbar";
+import Sidebar from "@/components/sidebar";
 
 export default function Layout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const { isSidebarOpen, toggleSidebar } = useAirportContext(); // Destructure sidebar state and toggle function
-  const [isTopBarOpen, setIsTopBarOpen] = useState(false); // State for TopBar visibility
+  const { isSidebarOpen, toggleSidebar } = useAirportContext();
+  const [isTopBarOpen, setIsTopBarOpen] = useState(false);
 
-  // Function to handle opening the TopBar
   const openTopBar = () => {
     setIsTopBarOpen(true);
   };
 
-  // Function to handle closing the TopBar
   const closeTopBar = () => {
     setIsTopBarOpen(false);
   };
 
   return (
     <div>
-      {/* SearchNav controls the sidebar */}
       <SearchNav onClick={openTopBar} />
-      {/* Sidebar controlled by AirportContext */}
       <Sidebar isOpen={isSidebarOpen} onClose={toggleSidebar} />
 
-      {/* Conditionally render TopBar based on isTopBarOpen */}
       {isTopBarOpen && <TopBar onClose={closeTopBar} />}
 
-      {/* The rest of the children */}
       {children}
     </div>
   );

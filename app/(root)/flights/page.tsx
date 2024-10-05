@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import FlightCard from "@/components/flight-card";
 import flightsData from "@/public/flights.json";
 
@@ -9,7 +9,6 @@ const FlightList: React.FC = () => {
       {flightsData.map((flight, index) => (
         <div key={index} className="mb-6">
           {" "}
-          {/* Adds margin bottom to each card */}
           <FlightCard {...flight} />
         </div>
       ))}

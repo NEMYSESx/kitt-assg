@@ -1,6 +1,6 @@
-import Sidebar from "@/components/sidebar";
+// import Sidebar from "@/components/sidebar";
 import { useAirportContext } from "@/context/use-airport";
-import React, { useState } from "react";
+import React from "react";
 
 type Airline = {
   name: string;
@@ -24,12 +24,11 @@ type FlightCardProps = {
 };
 
 const FlightCard: React.FC<FlightCardProps> = ({ segments, price }) => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  // const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const { toggleSidebar } = useAirportContext();
 
   return (
     <div className="flex justify-between items-center border border-gray-200 shadow-sm  h-60 rounded-lg hover:shadow-lg hover:bg-gray-100">
-      {/* Flight Details */}
       <div className="flex flex-col space-y-4 w-[1200px] h-60 p-4 border">
         {segments.map((segment, index) => (
           <div key={index} className="flex justify-between">

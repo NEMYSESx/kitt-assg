@@ -1,10 +1,7 @@
-// components/DestinationSwitcher.tsx
-
 "use client";
 
 import React, { useState } from "react";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
-import { useRouter } from "next/navigation";
 import { ChevronDown, LocateIcon } from "lucide-react";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
@@ -25,9 +22,9 @@ interface Airport {
 }
 
 interface DestinationSwitcherProps {
-  airports: Airport[]; // Update to use the Airport type
-  selectedAirport: Airport | null; // Changed to Airport type
-  onSelect: (airport: Airport) => void; // Update to Airport type
+  airports: Airport[];
+  selectedAirport: Airport | null;
+  onSelect: (airport: Airport) => void;
 }
 
 export const DestinationSwitcher: React.FC<DestinationSwitcherProps> = ({
@@ -68,12 +65,14 @@ export const DestinationSwitcher: React.FC<DestinationSwitcherProps> = ({
                   }}
                   className="text-sm"
                 >
-                  <div className="flex items-end">
-                    <div>
-                      <div>{airport.country}</div>
-                      <span>{airport.city}</span>
+                  <div className="flex justify-between items-center w-full">
+                    <div className="flex-1">
+                      <div className="text-lg ">{airport.city}</div>
+                      <div className="text-gray-500">{airport.country}</div>
                     </div>
-                    <span>{airport.code}</span>
+                    <div className="text-lg w-16 text-right">
+                      {airport.code}
+                    </div>
                   </div>
                 </CommandItem>
               ))}

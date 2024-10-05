@@ -29,7 +29,6 @@ interface AirportContextType {
   warningMessage: string;
   setWarningMessage: React.Dispatch<React.SetStateAction<string>>;
 
-  // Sidebar-related state
   isSidebarOpen: boolean;
   toggleSidebar: () => void;
 }
@@ -55,11 +54,15 @@ export const AirportProvider: React.FC<{ children: React.ReactNode }> = ({
   const [showToDropdown, setShowToDropdown] = useState(false);
   const [warningMessage, setWarningMessage] = useState("");
 
-  // Sidebar state
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const toggleSidebar = () => {
-    setIsSidebarOpen((prev) => !prev);
+    setIsSidebarOpen((prev) => {
+      console.log("Previous state:", prev);
+      const newState = !prev;
+      console.log("New state:", newState);
+      return newState;
+    });
   };
 
   return (
@@ -83,7 +86,7 @@ export const AirportProvider: React.FC<{ children: React.ReactNode }> = ({
         setShowToDropdown,
         warningMessage,
         setWarningMessage,
-        // Sidebar-related values
+
         isSidebarOpen,
         toggleSidebar,
       }}
