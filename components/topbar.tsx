@@ -11,6 +11,7 @@ import WarningMessage from "./warning"; // Import WarningMessage component
 import { ArrowLeftRight, Search } from "lucide-react";
 import { DestinationSwitcher } from "@/components/airport-switcher"; // Import DestinationSwitcher
 
+// Add `onClose` as a prop from the parent component
 export const TopBar: React.FC<{ onClose: () => void }> = ({ onClose }) => {
   const {
     departureDate,
@@ -27,7 +28,6 @@ export const TopBar: React.FC<{ onClose: () => void }> = ({ onClose }) => {
 
   const router = useRouter();
 
-  // States to manage selected airports
   const [selectedFromAirport, setSelectedFromAirport] = useState<{
     name: string;
     code: string;
@@ -41,7 +41,6 @@ export const TopBar: React.FC<{ onClose: () => void }> = ({ onClose }) => {
     country: string;
   } | null>(null);
 
-  // Fetch the selected airports based on the context on initial render
   useEffect(() => {
     const fromAirportData = airportsData.airports.find(
       (airport) => airport.code === fromAirport
@@ -66,6 +65,7 @@ export const TopBar: React.FC<{ onClose: () => void }> = ({ onClose }) => {
     <div className="bg-white fixed top-0 left-0 right-0 z-50 border">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
+          {/* Use the onClose prop here to close the TopBar */}
           <Button onClick={onClose} variant="outline">
             Close
           </Button>
